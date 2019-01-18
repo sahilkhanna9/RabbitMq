@@ -1,0 +1,9 @@
+---
+- hosts: web
+  tasks:
+    - name: get OS version
+      setup:
+        filter: ansible_facts
+#      win_command: 'gwmi win32_operatingsystem | % caption'
+      register: result
+    - debug: var=result
