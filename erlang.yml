@@ -1,0 +1,7 @@
+---
+- hosts: web
+  tasks:
+  - name: Download Erlang 21.2
+    win_get_url:
+      url: http://erlang.org/download/otp_win64_21.2.exe
+      dest: C:\tmp\erlang
