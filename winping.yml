@@ -1,0 +1,5 @@
+---
+- hosts: rabbit
+  tasks:
+  - name: Check ip configuration
+    win_ping:
